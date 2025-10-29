@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.bin
+
+# Virtual environment
+.venv/
+
+# Streamlit cache
+.streamlit/
+
+# Vector store
+chroma_store/
+
+# Environment files
+.env
+.env.*
+
+# IDE / OS files
+.vscode/
+.DS_Store
+Thumbs.db
