@@ -1,7 +1,7 @@
 📄 Ask My PDFs — Minimal RAG over Local Documents
 
 This repository lets you query your own PDFs using a lightweight Retrieval-Augmented Generation (RAG) pipeline:
-chunk → embed → store → retrieve → (optionally) generate answers.
+chunk → embed → store → retrieve → generate answers.
 
 🚀 Features
 
@@ -34,14 +34,14 @@ cp .env.example .env
 # 5. Launch the app
 streamlit run app.py
 
-🧩 CLI Usage (Optional)
+🧩 CLI Usage 
 # Ingest a folder of PDFs into the vector store
 python cli.py ingest --path ./docs
 
 # Ask a question (retrieval-only mode)
 python cli.py query --q "What are the main contributions?" --k 4
 
-⚙️ Environment Configuration (.env.example)
+⚙️ Environment Configuration (.env)
 
 Tune parameters easily in your .env file:
 
@@ -51,7 +51,7 @@ EMBEDDING_MODEL	Embedding model name	sentence-transformers/all-MiniLM-L6-v2
 CHUNK_SIZE	Chunk length in characters	900
 CHUNK_OVERLAP	Overlap between chunks	120
 TOP_K	Number of results retrieved	4
-GENERATOR	none or openai	openai
+GENERATOR openai	or none
 OPENAI_API_KEY	Your OpenAI API key	sk-XXXX...
 COLLECTION_NAME	ChromaDB collection name	pdfs
 🗂️ Project Structure
@@ -69,7 +69,7 @@ ask-my-pdfs/
 │   └── eval_basics.py     # Retrieval sanity checks
 ├── docs/                  # Place your PDFs here
 ├── chroma_store/          # Auto-created local vector store
-├── .env.example           # Configuration template
+├── .env           # Configuration template
 ├── requirements.txt       # Dependencies
 └── README.md
 
