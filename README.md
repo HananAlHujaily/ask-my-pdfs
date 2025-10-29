@@ -1,4 +1,4 @@
-📄 Ask My PDFs — Minimal RAG over Local Documents
+# 📄 Ask My PDFs — Minimal RAG over Local Documents
 
 This repository lets you query your own PDFs using a lightweight Retrieval-Augmented Generation (RAG) pipeline:
 chunk → embed → store → retrieve → generate answers.
